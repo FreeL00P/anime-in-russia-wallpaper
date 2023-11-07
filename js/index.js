@@ -24,27 +24,20 @@ nextButton.addEventListener("click", () => {
   showImage(currentIndex);
 });
 
-const folderPath = "./imgs/"; // 你的文件夹路径
-
 function readImages() {
-  fetch(folderPath)
-    .then((response) => response.text())
-    .then((data) => {
-      const parser = new DOMParser();
-      const htmlDoc = parser.parseFromString(data, "text/html");
-      const links = Array.from(htmlDoc.querySelectorAll("a"));
-
-      links.forEach((link) => {
-        const fileName = link.getAttribute("href");
-        if (fileName && fileName.endsWith(".jpg")) {
-          imagePaths.push(fileName);
-        }
-      });
-
-      showImage(currentIndex);
-    })
-    .catch((error) => console.error("Error fetching images:", error));
+  const folderPath = "./imgs/"; // Replace with your folder path
+  getImagesInDirectory(folderPath);
+  currentIndex = Random(0, imagePaths.length - 1);
+  showImage(currentIndex);
 }
+function getImagesInDirectory(folderPath) {
+  for (let i = 1; i <= 78; i++) {
+    const fileName = folderPath + `${i}.jpg`;
+    imagePaths.push(fileName);
+  }
+  return imagePaths;
+}
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") {
     currentIndex = (currentIndex - 1 + imagePaths.length) % imagePaths.length;
@@ -55,4 +48,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+function Random(min, max) {
+  return Math.round(Math.random() * (max - min)) + min;
+}
 readImages();
