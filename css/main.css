@@ -75,7 +75,7 @@ body {
   /* background-image: url("https://www.dmoe.cc/random.php"); */
 }
 .wrapper {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -106,9 +106,11 @@ body {
   line-height: 1;
   font-size: 22px;
   margin-bottom: 10px;
+  color: azure;
 }
 .container .section-1 .text .description {
-  color: #999;
+  color: seashell;
+  /* filter: grayscale(1) contrast(999) invert(1); */
 }
 .container .section-2 {
   position: relative;

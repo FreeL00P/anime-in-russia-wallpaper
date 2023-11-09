@@ -10,22 +10,22 @@ function getHitokoto() {
 // 弹幕颜色配置
 function getRandomColor() {
   const colors = [
-    "#333333",
-    "#222222",
-    "#666666",
-    "#AA0033",
-    "#FF6600",
-    "#006699",
-    "#007E9E",
-    "#9F209F",
-    "#008CBA",
-    "#2E8B57",
+    "#0F0F0F",
+    "#1E1E1E",
+    "#2D2D2D",
+    "#3C3C3C",
+    "#4B4B4B",
+    "#5A5A5A",
+    "#696969",
+    "#787878",
+    "#878787",
+    "#969696",
   ];
   const colorIndex = Math.floor(Math.random() * colors.length);
   return colors[colorIndex];
 }
 
-let isDanmuRunning = true; // 控制弹幕是否运行
+let isDanmuRunning = false; // 控制弹幕是否运行
 
 // 弹幕属性配置
 function createDanmu() {

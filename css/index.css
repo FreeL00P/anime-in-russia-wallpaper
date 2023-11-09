@@ -24,3 +24,12 @@
 .button:hover {
   color: black; /* Change to the desired color on hover */
 }
+/* 图片淡入淡出 */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
