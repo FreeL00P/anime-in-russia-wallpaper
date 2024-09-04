@@ -102,26 +102,7 @@ document.querySelector(".avatar img").src = "./src/tx.png";
 const links = document.querySelector(".links"); //外链div
 //外链数量
 const imagesData = [
-  {
-    src: "./src/tencent-qq-8c2d8dc7.svg",
-    alt: "QQ",
-    href: "https://user.qzone.qq.com/1084472249",
-  },
-  {
-    src: "./src/iconmonstr-github-1.svg",
-    alt: "GitHub",
-    href: "https://github.com/FreeL00P",
-  },
-  {
-    src: "./src/outlook-e4c48930.svg",
-    alt: "Email",
-    href: "mailto:FreeL00P@tom.com",
-  },
-  {
-    src: "./src/bilibili-1b0355a4.svg",
-    alt: "Bilibili",
-    href: "https://space.bilibili.com/284822327",
-  },
+ 
 ];
 //根据外链数量创建img标签添加到links下
 for (let i = 0; i < imagesData.length; i++) {
